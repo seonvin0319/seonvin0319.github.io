@@ -50,7 +50,7 @@
             <h2>Research Interests</h2>
           </header>
           <div class="interest-list" aria-label="Research interests">
-            <span>Reinforcement Learning</span>
+            <span>Offline Reinforcement Learning</span>
             <span>Sequential Decision Making</span>
             <span>Generative Models</span>
           </div>
@@ -63,8 +63,8 @@
             <div class="work-copy">
               <h3>PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning</h3>
               <p class="authors">
-                Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong
-                <span>· Under Review · <sup>*</sup>Equal contribution</span>
+                Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong<sup>†</sup><br />
+                Under Review · <sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author
               </p>
               <ul>
                 <li>
@@ -118,9 +118,8 @@
                   step size based on critic reliability and realized policy movement
                 </li>
                 <li>
-                  Investigating value-guided interpolation between behavior-supported student and
-                  multi-step teacher policies to control the extent of policy improvement from
-                  behavior-supported policies
+                  Investigating value-guided interpolation between a behavior-supported student
+                  policy and a multi-step teacher policy
                 </li>
               </ul>
             </article>
@@ -128,13 +127,12 @@
               <h3>Extensions of PathBridger</h3>
               <ul>
                 <li>
-                  Exploring follow-up directions for long-horizon goal-conditioned decision making
-                  beyond the fully offline setting
+                  Exploring offline-to-online learning and more flexible long-horizon
+                  goal-conditioned control
                 </li>
                 <li>
-                  Interested in extending state-space planning and generative approaches toward
-                  offline-to-online learning, action-free settings, and more flexible long-horizon
-                  control
+                  Extending state-space planning and generative approaches to action-free settings,
+                  where the data do not provide actions
                 </li>
               </ul>
             </article>
@@ -149,12 +147,12 @@
               <h3>Policy Optimization in Offline Reinforcement Learning</h3>
               <ul>
                 <li>
-                  Interpreted behavior-regularized policy updates as proximal steps along a
+                  Treat behavior-regularized policy updates as proximal steps along a
                   critic-induced gradient flow
                 </li>
                 <li>
-                  Investigated multi-step policy refinement based on this view under different
-                  policy geometries and imperfect critic estimates
+                  Use this view to reason about multi-step refinement under different policy
+                  geometries and imperfect critic estimates
                 </li>
               </ul>
             </article>
@@ -162,10 +160,12 @@
               <h3>Generative Models for Sequential Decision Making</h3>
               <ul>
                 <li>
-                  Studied a range of generative approaches to sequential decision making, including
-                  sequence models, diffusion models, energy-based methods, and flow-based models
+                  Study generative approaches to sequential decision making, including sequence
+                  models, diffusion models, energy-based methods, and flow-based models
                 </li>
-                <li>Explored their use for trajectory generation, planning, and long-horizon control</li>
+                <li>
+                  Use them for trajectory generation, planning, and long-horizon control
+                </li>
               </ul>
             </article>
           </div>

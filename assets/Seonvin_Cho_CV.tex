@@ -1,0 +1,145 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.62in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{setspace}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.0}
+\setstretch{1.02}
+
+\definecolor{cvgray}{HTML}{555555}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0pt}{}
+  [\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\newcommand{\cvitem}[2]{%
+  \begin{tabularx}{\textwidth}{@{}X >{\raggedleft\arraybackslash}p{0.23\textwidth}@{}}
+    #1 & #2
+  \end{tabularx}%
+}
+
+\newcommand{\cventry}[4]{%
+  \cvitem{\textbf{#1}}{\textcolor{cvgray}{#2}}\\[-1pt]
+  {#3}\\[-1pt]
+  {\small\textcolor{cvgray}{#4}}\vspace{2pt}
+}
+
+\newcommand{\researchentry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X >{\raggedleft\arraybackslash}p{0.10\textwidth}@{}}
+    \textbf{#1} & \textcolor{cvgray}{#2}
+  \end{tabularx}\\[-1pt]
+  {\small #3}\vspace{2pt}
+  \begin{itemize}[leftmargin=1.25em,itemsep=1.5pt,topsep=1pt,parsep=0pt]
+    #4
+  \end{itemize}
+  \vspace{1pt}
+}
+
+\newcommand{\linkrow}[2]{%
+  {\small #1 \;|\; #2}\vspace{2pt}
+}
+
+\begin{document}
+
+% ===== Header =====
+{\LARGE\bfseries SEONVIN CHO}\\[3pt]
+Integrated M.S./Ph.D. Student in Electrical Engineering, Hanyang University\\[2pt]
+\href{mailto:seonbin0319@hanyang.ac.kr}{seonbin0319@hanyang.ac.kr}
+\;|\;
+\href{https://seonvin0319.github.io/index.html}{Website}
+\;|\;
+\href{https://github.com/seonvin0319}{GitHub}
+\;|\;
+Seoul, Republic of Korea
+
+\section*{Research Interests}
+Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\textperiodcentered\; Generative Models
+
+\section*{Education}
+\cventry
+  {Hanyang University, Seoul, Republic of Korea}
+  {Sep. 2024 -- Present}
+  {Integrated M.S./Ph.D. Student in Electrical Engineering}
+  {\textit{Advisor: \href{https://sites.google.com/view/snlab}{Prof. Songnam Hong}}}\\[-1pt]
+\textbf{GPA:} 4.45 / 4.50
+\vspace{5pt}
+
+\cventry
+  {Hanyang University, Seoul, Republic of Korea}
+  {Mar. 2020 -- Aug. 2024}
+  {B.S. in Electrical Engineering}
+  {\textit{Summa Cum Laude, Early Graduation}}\\[-1pt]
+\textbf{GPA:} 4.26 / 4.50
+
+\section*{Research}
+
+\researchentry
+  {PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning}
+  {2026}
+  {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Under Review} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
+   \href{https://github.com/SChoish/PathBridger}{[Code]} \;\; \textcolor{cvgray}{[arXiv]}}
+  {
+    \item Developed a hierarchical offline goal-conditioned RL framework that connects subgoal selection to short-horizon execution through explicit state-space bridges.
+    \item Combined generative endpoint proposals, transitive value-based selection, and inverse-dynamics decoding to produce executable short-horizon action chunks.
+  }
+
+\researchentry
+  {Federated Learning under Noisy Labels}
+  {2023}
+  {Undergraduate Capstone Project\\
+   \href{https://github.com/seonvin0319/TriMix}{[Code]} \;\; \href{https://seonvin0319.github.io/assets/Analyzing_Loss_Value_Distribution_from_Learning_Label_Noise_Data_in_the_Federated_Learning_Environment.pdf}{[Technical Report]}}
+  {
+    \item Analyzed loss-value distributions in federated learning to identify unreliable samples under label noise.
+    \item Received the Best Award (Department) and Excellence Award (College of Engineering).
+  }
+
+\researchentry
+  {Multi-Step Proximal Policy Improvement}
+  {Present}
+  {Ongoing Research}
+  {
+    \item Investigating re-centered multi-step proximal refinement that decouples critic bootstrap exposure from final-policy reach and improves stability across policy-improvement budgets.
+  }
+
+\researchentry
+  {Adaptive Policy Optimization}
+  {Present}
+  {Ongoing Research}
+  {
+    \item Developing adaptive refinement of step size and depth, together with value-guided interpolation between behavior-supported student policies and multi-step teacher policies.
+  }
+
+\researchentry
+  {Extensions of PathBridger}
+  {Present}
+  {Ongoing Research}
+  {
+    \item Exploring offline-to-online learning and more flexible long-horizon control.
+    \item Extending state-space planning and generative approaches to action-free settings, where the data do not provide actions.
+  }
+
+\section*{Honors \& Awards}
+\cvitem{BK Research Assistantship (BK-RA), Hanyang University}{Spring \& Fall 2026}\\[3pt]
+\cvitem{IEEE Antennas and Propagation Society Undergraduate Summer Research Scholarship}{2024}\\[3pt]
+\cvitem{Excellence Paper Award, KIEES \;\; \href{https://github.com/seonvin0319/gpu_dispersive_fdtd_ss}{[Code]}}{Winter \& Fall 2024}\\[3pt]
+\cvitem{Best \& Excellence Awards, Federated Learning Capstone Project}{2023}\\[3pt]
+\cvitem{Excellence Award, Embedded Creative Robot Challenge}{2022}\\[3pt]
+\cvitem{Merit-Based \& Academic Scholarships, Hanyang University}{2021 -- 2024}
+
+\end{document}
