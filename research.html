@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Research by Seonvin Cho on reinforcement learning, sequential decision making, and generative models."
+    />
+    <meta name="theme-color" content="#686b88" />
+    <title>Research — Seonvin Cho</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="inner-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="site-name" href="index.html">SEONVIN CHO</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="experiences.html">Experiences</a>
+      </nav>
+      <div class="sidebar-links">
+        <a href="assets/Seonvin_Cho_CV.pdf">CV</a>
+        <a href="mailto:seonbin0319@hanyang.ac.kr">Email</a>
+        <a href="https://github.com/seonvin0319" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </aside>
+
+    <header class="mobile-header">
+      <a href="index.html">SEONVIN CHO</a>
+      <nav aria-label="Mobile navigation">
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="experiences.html">Experiences</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <header class="page-header">
+        <div class="page-width">
+          <h1>Research</h1>
+        </div>
+      </header>
+
+      <section class="content-section" id="research">
+        <div class="page-width">
+          <header class="section-heading">
+            <h2>Research Interests</h2>
+          </header>
+          <div class="interest-list" aria-label="Research interests">
+            <span>Reinforcement Learning</span>
+            <span>Sequential Decision Making</span>
+            <span>Generative Models</span>
+          </div>
+
+          <header class="section-heading">
+            <h2>Recent Work</h2>
+          </header>
+
+          <article class="featured-work">
+            <div class="work-copy">
+              <h3>PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning</h3>
+              <p class="authors">
+                Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong
+                <span>· Under Review · <sup>*</sup>Equal contribution</span>
+              </p>
+              <ul>
+                <li>
+                  Developed a hierarchical offline GCRL framework that connects subgoal selection
+                  to short-horizon execution through state-space bridges
+                </li>
+                <li>
+                  Combined generative endpoint proposals, transitive value-based selection, and
+                  inverse-dynamics decoding to produce executable action chunks from offline
+                  trajectories
+                </li>
+              </ul>
+              <div class="button-row">
+                <a class="button" href="https://github.com/SChoish/PathBridger" target="_blank" rel="noreferrer"
+                  >code</a
+                >
+                <span class="pending-link">arXiv</span>
+              </div>
+            </div>
+            <img
+              src="assets/pathbridger-architecture.jpg"
+              alt="Overview of the PathBridger bridge policy"
+              width="1280"
+              height="690"
+            />
+          </article>
+
+          <div class="subsection-heading">
+            <h2>Ongoing Work</h2>
+          </div>
+
+          <div class="work-stack">
+            <article>
+              <h3>Multi-Step Proximal Policy Improvement</h3>
+              <ul>
+                <li>
+                  Investigating how re-centered multi-step policy refinement can decouple critic
+                  bootstrap exposure from final policy improvement
+                </li>
+                <li>
+                  Studying the stability of proximal refinement across policy-improvement budgets,
+                  refinement depths, and critic conditions
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h3>Adaptive Policy Optimization</h3>
+              <ul>
+                <li>
+                  Developing adaptive policy refinement that jointly adjusts refinement depth and
+                  step size based on critic reliability and realized policy movement
+                </li>
+                <li>
+                  Investigating value-guided interpolation between behavior-supported student and
+                  multi-step teacher policies to control the extent of policy improvement from
+                  behavior-supported policies
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h3>Extensions of PathBridger</h3>
+              <ul>
+                <li>
+                  Exploring follow-up directions for long-horizon goal-conditioned decision making
+                  beyond the fully offline setting
+                </li>
+                <li>
+                  Interested in extending state-space planning and generative approaches toward
+                  offline-to-online learning, action-free settings, and more flexible long-horizon
+                  control
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="subsection-heading">
+            <h2>Research Topics</h2>
+          </div>
+
+          <div class="topic-stack">
+            <article>
+              <h3>Policy Optimization in Offline Reinforcement Learning</h3>
+              <ul>
+                <li>
+                  Interpreted behavior-regularized policy updates as proximal steps along a
+                  critic-induced gradient flow
+                </li>
+                <li>
+                  Investigated multi-step policy refinement based on this view under different
+                  policy geometries and imperfect critic estimates
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h3>Generative Models for Sequential Decision Making</h3>
+              <ul>
+                <li>
+                  Studied a range of generative approaches to sequential decision making, including
+                  sequence models, diffusion models, energy-based methods, and flow-based models
+                </li>
+                <li>Explored their use for trajectory generation, planning, and long-horizon control</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <strong>Seonvin Cho</strong>
+          <span>Reinforcement Learning · Sequential Decision Making</span>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:seonbin0319@hanyang.ac.kr">Email</a>
+          <a href="assets/Seonvin_Cho_CV.pdf">CV</a>
+          <a href="https://github.com/seonvin0319" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

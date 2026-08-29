@@ -90,7 +90,8 @@ a:hover {
 }
 
 .sidebar nav a:hover,
-.sidebar nav a:focus-visible {
+.sidebar nav a:focus-visible,
+.sidebar nav a[aria-current="page"] {
   color: var(--accent-dark);
   border-left-color: var(--accent);
   background: var(--accent-soft);
@@ -156,24 +157,24 @@ main {
 
 .home-grid {
   display: grid;
-  grid-template-columns: minmax(250px, 0.76fr) minmax(420px, 1.5fr);
-  gap: clamp(48px, 7vw, 90px);
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 72px);
   align-items: start;
   padding-top: 70px;
   padding-bottom: 92px;
 }
 
 .portrait-column {
-  position: sticky;
-  top: 36px;
+  width: 220px;
 }
 
 .portrait {
   display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 27%;
+  width: 220px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
   box-shadow: var(--shadow);
 }
 
@@ -226,6 +227,25 @@ main {
   gap: 20px;
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.page-header {
+  padding: 64px 0 0;
+  background: var(--wash);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-header .page-width {
+  padding-bottom: 32px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: var(--accent-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 .education-list h3 {
@@ -402,6 +422,72 @@ main {
 }
 
 .topic-grid h3 {
+  margin-top: 0;
+}
+
+.work-stack {
+  display: grid;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.work-stack article,
+.topic-stack article {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.work-stack h3,
+.topic-stack h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.work-stack ul,
+.topic-stack ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  color: #4e515d;
+}
+
+.work-stack li + li,
+.topic-stack li + li {
+  margin-top: 6px;
+}
+
+.topic-stack {
+  display: grid;
+  gap: 36px;
+  margin-top: 28px;
+}
+
+.award-details {
+  display: grid;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.inline-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.inner-page .content-section {
+  padding-top: 56px;
+}
+
+.inner-page .section-heading h2,
+.inner-page .subsection-heading h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.inner-page .experience-layout {
   margin-top: 0;
 }
 
@@ -586,6 +672,11 @@ footer span {
     text-decoration: none;
   }
 
+  .mobile-header nav a[aria-current="page"] {
+    color: var(--accent-dark);
+    font-weight: 650;
+  }
+
   main {
     margin-left: 0;
   }
@@ -616,8 +707,13 @@ footer span {
 
   .portrait-column {
     position: static;
-    max-width: 360px;
+    width: 180px;
+    max-width: 180px;
     margin: 0 auto;
+  }
+
+  .portrait {
+    width: 180px;
   }
 
   .lead {
