@@ -94,34 +94,63 @@
             />
           </article>
 
+          <article class="featured-work">
+            <div class="work-copy">
+              <h3>Multi-step Proximal Policy Improvement in Offline Reinforcement Learning</h3>
+              <p class="authors">
+                Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong<sup>†</sup><br />
+                Preprint · <sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author
+              </p>
+              <ul>
+                <li>
+                  Developed a geometric view of offline actor updates, interpreting a broad class
+                  of behavior-anchored objectives as a single proximal policy improvement step
+                  on a statistical manifold
+                </li>
+                <li>
+                  Proposed MPI, a plug-in refinement that composes sequential re-centered
+                  proximal steps and improves TD3+BC, ReBRAC, and IQL on many D4RL tasks
+                </li>
+              </ul>
+              <div class="button-row">
+                <a class="button" href="https://github.com/seonvin0319/MPI" target="_blank" rel="noreferrer"
+                  >code</a
+                >
+                <span class="pending-link">TBA</span>
+              </div>
+            </div>
+          </article>
+
           <div class="subsection-heading">
             <h2>Ongoing Work</h2>
           </div>
 
           <div class="work-stack">
             <article>
-              <h3>Multi-Step Proximal Policy Improvement</h3>
+              <h3>MART: Multi-Step Actor Refinement Trajectories</h3>
               <ul>
                 <li>
-                  Investigating how re-centered multi-step policy refinement can decouple critic
-                  bootstrap exposure from final policy improvement
+                  Developing a fixed-budget actor-refinement path that divides a nominal
+                  improvement horizon across predecessor-centered actors
                 </li>
                 <li>
-                  Studying the stability of proximal refinement across policy-improvement budgets,
-                  refinement depths, and critic conditions
+                  Separating critic-facing exposure from deployment reach to study how
+                  refinement depth changes offline training stability
                 </li>
               </ul>
             </article>
             <article>
-              <h3>Adaptive Policy Optimization</h3>
+              <h3>AMO: Adaptive Multiscale Policy Optimization</h3>
               <ul>
                 <li>
-                  Developing adaptive policy refinement that jointly adjusts refinement depth and
-                  step size based on critic reliability and realized policy movement
+                  Studying adaptive proximal policy improvement that learns a total proximal
+                  horizon T through a cross-fitted outer objective evaluated with a frozen
+                  target critic
                 </li>
                 <li>
-                  Investigating value-guided interpolation between a behavior-supported student
-                  policy and a multi-step teacher policy
+                  Training two independently anchored policies at coupled scales: a conservative
+                  T/N-policy supplies Bellman-target actions, while a full-T policy is used
+                  for execution and guides the adaptation of T
                 </li>
               </ul>
             </article>
