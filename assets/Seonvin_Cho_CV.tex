@@ -44,15 +44,29 @@
   \begin{tabularx}{\textwidth}{@{}X >{\raggedleft\arraybackslash}p{0.10\textwidth}@{}}
     \textbf{#1} & \textcolor{cvgray}{#2}
   \end{tabularx}\\[-1pt]
-  {\small #3}\vspace{2pt}
+  {\small #3}\vspace{1pt}
   \begin{itemize}[leftmargin=1.25em,itemsep=1pt,topsep=1pt,parsep=0pt]
     #4
   \end{itemize}
   \vspace{0pt}
 }
 
+\newcommand{\ongoingentry}[3]{%
+  \begin{tabularx}{\textwidth}{@{}X >{\raggedleft\arraybackslash}p{0.10\textwidth}@{}}
+    \textbf{#1} & \textcolor{cvgray}{#2}
+  \end{tabularx}
+  \begin{itemize}[leftmargin=1.25em,itemsep=1pt,topsep=1pt,parsep=0pt]
+    #3
+  \end{itemize}
+  \vspace{0pt}
+}
+
 \newcommand{\linkrow}[2]{%
   {\small #1 \;|\; #2}\vspace{2pt}
+}
+
+\newcommand{\researchsub}[1]{%
+  \vspace{2pt}{\small\bfseries\underline{#1}}\par\vspace{1pt}
 }
 
 \begin{document}
@@ -78,7 +92,7 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
   {Integrated M.S./Ph.D. Student in Electronic Engineering}
   {\textit{Advisor: \href{https://sites.google.com/view/snlab}{Prof. Songnam Hong}}}\\[-1pt]
 \textbf{GPA:} 4.45 / 4.50
-\vspace{5pt}
+\vspace{3pt}
 
 \cventry
   {Hanyang University, Seoul, Republic of Korea}
@@ -89,10 +103,11 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
 
 \section*{Research}
 
+\researchsub{Recent Work}
 \researchentry
   {PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning}
   {2026}
-  {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Under Review} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
+  {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Preprint} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
    \href{https://github.com/SChoish/PathBridger}{[Code]} \;\; \href{https://arxiv.org/pdf/2608.29061}{[arXiv]}}
   {
     \item Developed a hierarchical offline goal-conditioned RL framework that connects subgoal selection to short-horizon execution through explicit state-space bridges.
@@ -103,7 +118,7 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
   {Multi-step Proximal Policy Improvement in Offline Reinforcement Learning}
   {2026}
   {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Preprint} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
-   \href{https://github.com/seonvin0319/MPI}{[Code]} \;\; \textcolor{cvgray}{[TBA]}}
+   \href{https://github.com/SChoish/MPI}{[Code]} \;\; \textcolor{cvgray}{[TBA]}}
   {
     \item Developed a geometric view of offline actor updates, interpreting a broad class of behavior-anchored objectives as a single proximal policy improvement step on a statistical manifold.
     \item Proposed MPI, a plug-in refinement that composes sequential re-centered proximal steps and improves TD3+BC, ReBRAC, and IQL on many D4RL tasks.
@@ -119,37 +134,34 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
     \item Received the Best Award (Department) and Excellence Award (College of Engineering).
   }
 
-\researchentry
+\researchsub{Ongoing Research}
+\ongoingentry
   {MART: Multi-Step Actor Refinement Trajectories}
   {Present}
-  {Ongoing Research}
   {
     \item Developing a fixed-budget actor-refinement path that divides a nominal improvement horizon across predecessor-centered actors and separates critic-facing exposure from deployment reach.
   }
 
-\researchentry
+\ongoingentry
   {AMO: Adaptive Multiscale Policy Optimization}
   {Present}
-  {Ongoing Research}
   {
     \item Studying adaptive proximal policy improvement that learns a total horizon \(T\) with a cross-fitted outer objective, using a conservative \(T/N\)-policy for Bellman targets and a full-\(T\) policy for execution.
   }
 
-\researchentry
+\ongoingentry
   {Extensions of PathBridger}
   {Present}
-  {Ongoing Research}
   {
-    \item Exploring offline-to-online learning and more flexible long-horizon control.
-    \item Extending state-space planning and generative approaches to action-free settings, where the data do not provide actions.
+    \item Exploring offline-to-online learning, longer-horizon control, and action-free settings where the data do not provide actions.
   }
 
 \section*{Honors \& Awards}
-\cvitem{BK Research Assistantship (BK-RA), Hanyang University}{Spring \& Fall 2026}\\[3pt]
-\cvitem{IEEE Antennas and Propagation Society Undergraduate Summer Research Scholarship}{2024}\\[3pt]
-\cvitem{Excellence Paper Award, KIEES \;\; \href{https://github.com/seonvin0319/gpu_dispersive_fdtd_ss}{[Code]}}{Winter \& Fall 2024}\\[3pt]
-\cvitem{Best \& Excellence Awards, Federated Learning Capstone Project}{2023}\\[3pt]
-\cvitem{Excellence Award, Embedded Creative Robot Challenge}{2022}\\[3pt]
+\cvitem{BK Research Assistantship (BK-RA), Hanyang University}{Spring \& Fall 2026}\\[2pt]
+\cvitem{IEEE Antennas and Propagation Society Undergraduate Summer Research Scholarship}{2024}\\[2pt]
+\cvitem{Excellence Paper Award, KIEES \;\; \href{https://github.com/seonvin0319/gpu_dispersive_fdtd_ss}{[Code]}}{Winter \& Fall 2024}\\[2pt]
+\cvitem{Best \& Excellence Awards, Federated Learning Capstone Project}{2023}\\[2pt]
+\cvitem{Excellence Award, Embedded Creative Robot Challenge}{2022}\\[2pt]
 \cvitem{Merit-Based \& Academic Scholarships, Hanyang University}{2021 -- 2024}
 
 \end{document}
