@@ -105,6 +105,26 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
 
 \researchsub{Recent Work}
 \researchentry
+  {Role-Adaptive Policy Optimization for Offline Reinforcement Learning}
+  {2026}
+  {\textbf{Seonvin Cho}, Soohyun Choi, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Preprint} \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
+   \href{https://arxiv.org/pdf/2609.40149}{[arXiv]}}
+  {
+    \item Proposed Role-Adaptive Policy Optimization (RAPO), which learns policy-update coefficients according to whether actions are used for critic bootstrapping or for execution.
+    \item Separated bootstrap and execution actors in TD3+BC and adapted only the inverse temperature for IQL, improving both base algorithms on D4RL locomotion and AntMaze.
+  }
+
+\researchentry
+  {Is One Step Enough for Offline Policy Improvement?}
+  {2026}
+  {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Preprint} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
+   \href{https://github.com/SChoish/MPI}{[Code]} \;\; \href{https://arxiv.org/pdf/2609.03842}{[arXiv]}}
+  {
+    \item Studied multi-step proximal policy improvement that re-centers each stage on the preceding policy, asking when a single improvement step is enough.
+    \item Distinguished subdivision of a fixed total horizon from additional refinement, with experiments on TD3+BC and IQL-based policy extraction in D4RL locomotion.
+  }
+
+\researchentry
   {PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning}
   {2026}
   {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Preprint} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
@@ -112,16 +132,6 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
   {
     \item Developed a hierarchical offline goal-conditioned RL framework that connects subgoal selection to short-horizon execution through explicit state-space bridges.
     \item Combined generative endpoint proposals, transitive value-based selection, and inverse-dynamics decoding to produce executable short-horizon action chunks.
-  }
-
-\researchentry
-  {Multi-step Proximal Policy Improvement in Offline Reinforcement Learning}
-  {2026}
-  {Soohyun Choi$^{*}$, \textbf{Seonvin Cho$^{*}$}, \href{https://sites.google.com/view/snlab}{Songnam Hong}$^{\dagger}$ \;\textperiodcentered\; \textit{Preprint} \;\textperiodcentered\; $^{*}$Equal contribution \;\textperiodcentered\; $^{\dagger}$Corresponding author\\
-   \href{https://github.com/SChoish/MPI}{[Code]} \;\; \href{https://arxiv.org/pdf/2609.03842}{[arXiv]}}
-  {
-    \item Developed a geometric view of offline actor updates, interpreting a broad class of behavior-anchored objectives as a single proximal policy improvement step on a statistical manifold.
-    \item Proposed MPI, a plug-in refinement that composes sequential re-centered proximal steps and improves TD3+BC, ReBRAC, and IQL on many D4RL tasks.
   }
 
 \researchentry
@@ -135,20 +145,6 @@ Reinforcement Learning \;\textperiodcentered\; Sequential Decision Making \;\tex
   }
 
 \researchsub{Ongoing Research}
-\ongoingentry
-  {MART: Multi-Step Actor Refinement Trajectories}
-  {Present}
-  {
-    \item Developing a fixed-budget actor-refinement path that divides a nominal improvement horizon across predecessor-centered actors and separates critic-facing exposure from deployment reach.
-  }
-
-\ongoingentry
-  {AMO: Adaptive Multiscale Policy Optimization}
-  {Present}
-  {
-    \item Studying adaptive proximal policy improvement that learns a total horizon \(T\) with a cross-fitted outer objective, using a conservative \(T/N\)-policy for Bellman targets and a full-\(T\) policy for execution.
-  }
-
 \ongoingentry
   {Extensions of PathBridger}
   {Present}

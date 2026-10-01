@@ -61,6 +61,60 @@
 
           <article class="featured-work">
             <div class="work-copy">
+              <h3>Role-Adaptive Policy Optimization for Offline Reinforcement Learning</h3>
+              <p class="authors">
+                <strong>Seonvin Cho</strong>, Soohyun Choi, Songnam Hong<sup>†</sup><br />
+                Preprint · <sup>†</sup>Corresponding author
+              </p>
+              <ul>
+                <li>
+                  Proposed Role-Adaptive Policy Optimization (RAPO), which learns policy-update
+                  coefficients according to whether actions are used for critic bootstrapping or
+                  for execution
+                </li>
+                <li>
+                  Separated bootstrap and execution actors in TD3+BC and adapted only the inverse
+                  temperature for IQL, improving both base algorithms on D4RL locomotion and AntMaze
+                </li>
+              </ul>
+              <div class="button-row">
+                <a class="button" href="https://arxiv.org/pdf/2609.40149" target="_blank" rel="noreferrer"
+                  >arXiv</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-work">
+            <div class="work-copy">
+              <h3>Is One Step Enough for Offline Policy Improvement?</h3>
+              <p class="authors">
+                Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong<sup>†</sup><br />
+                Preprint · <sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author
+              </p>
+              <ul>
+                <li>
+                  Studied multi-step proximal policy improvement that re-centers each stage on the
+                  preceding policy, asking when a single improvement step is enough
+                </li>
+                <li>
+                  Distinguished subdivision of a fixed total horizon from additional refinement,
+                  with experiments on TD3+BC and IQL-based policy extraction in D4RL locomotion
+                </li>
+              </ul>
+              <div class="button-row">
+                <a class="button" href="https://github.com/SChoish/MPI" target="_blank" rel="noreferrer"
+                  >code</a
+                >
+                <a class="button" href="https://arxiv.org/pdf/2609.03842" target="_blank" rel="noreferrer"
+                  >arXiv</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-work">
+            <div class="work-copy">
               <h3>PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning</h3>
               <p class="authors">
                 Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong<sup>†</sup><br />
@@ -94,68 +148,11 @@
             />
           </article>
 
-          <article class="featured-work">
-            <div class="work-copy">
-              <h3>Multi-step Proximal Policy Improvement in Offline Reinforcement Learning</h3>
-              <p class="authors">
-                Soohyun Choi<sup>*</sup>, <strong>Seonvin Cho<sup>*</sup></strong>, Songnam Hong<sup>†</sup><br />
-                Preprint · <sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author
-              </p>
-              <ul>
-                <li>
-                  Developed a geometric view of offline actor updates, interpreting a broad class
-                  of behavior-anchored objectives as a single proximal policy improvement step
-                  on a statistical manifold
-                </li>
-                <li>
-                  Proposed MPI, a plug-in refinement that composes sequential re-centered
-                  proximal steps and improves TD3+BC, ReBRAC, and IQL on many D4RL tasks
-                </li>
-              </ul>
-              <div class="button-row">
-                <a class="button" href="https://github.com/SChoish/MPI" target="_blank" rel="noreferrer"
-                  >code</a
-                >
-                <a class="button" href="https://arxiv.org/pdf/2609.03842" target="_blank" rel="noreferrer"
-                  >arXiv</a
-                >
-              </div>
-            </div>
-          </article>
-
           <div class="subsection-heading">
             <h2>Ongoing Work</h2>
           </div>
 
           <div class="work-stack">
-            <article>
-              <h3>MART: Multi-Step Actor Refinement Trajectories</h3>
-              <ul>
-                <li>
-                  Developing a fixed-budget actor-refinement path that divides a nominal
-                  improvement horizon across predecessor-centered actors
-                </li>
-                <li>
-                  Separating critic-facing exposure from deployment reach to study how
-                  refinement depth changes offline training stability
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>AMO: Adaptive Multiscale Policy Optimization</h3>
-              <ul>
-                <li>
-                  Studying adaptive proximal policy improvement that learns a total proximal
-                  horizon T through a cross-fitted outer objective evaluated with a frozen
-                  target critic
-                </li>
-                <li>
-                  Training two independently anchored policies at coupled scales: a conservative
-                  T/N-policy supplies Bellman-target actions, while a full-T policy is used
-                  for execution and guides the adaptation of T
-                </li>
-              </ul>
-            </article>
             <article>
               <h3>Extensions of PathBridger</h3>
               <ul>
